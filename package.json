@@ -12,6 +12,10 @@
   },
   "author": "Marcos Luna",
   "license": "ISC",
+  "dependencies": {
+    "socket.io": "*",
+    "express": "*"
+  },
   "bugs": {
     "url": "https://github.com/ml042685/socket.io-chat/issues"
   },
