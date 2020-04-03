@@ -38,6 +38,18 @@
         <script>
             $(function(){
                 var socket = io.connnect();
+                var $messageForm = $('#messageForm');
+                var $message = $('#messageForm');
+                var $chat = $('#chat');
+
+                $messageForm.submit(function(e){
+                    e.preventDefault();
+                    socket.emit('send message', $message.val());
+                    $message.val('');
+                });
+                socket.on('new message', function(data){
+                    $chat.append('<div class= "well">'+data.msg+'</div>');
+                });
             });
         </script>
 </body>
