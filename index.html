@@ -14,23 +14,25 @@
     </style>
 </head>
 <body>
+
+
     <div class="container">
+
+
     <div id="userFromArea" class="row">
     <div class="col-md-12">
-        <form id="UserForm">
+        <form id="userForm">
                     <div class="form-group">
-                        <label>Enter Message</label>
-                        <textarea class="form-control" id="message"></textarea>
+                        <label>Enter username</label>
+                        <input class="form-control" id="username" />
                         <br />
-                        <input type="submit" class="btn btn-primary" value 
-                        ="Send Message" />
+                        <input type="submit" class="btn btn-primary" value ="Login" />
                         </div>
                     </form>
-    
-    </div>
+                </div>
     </div>
 
-        <div id="messageArea" class="row">
+        <div  class="row" id="messageArea">
             <div class="col-md-4">
                 <div class="well">
                     <h3>Online Users</h3>
@@ -45,8 +47,7 @@
                         <label>Enter Message</label>
                         <textarea class="form-control" id="message"></textarea>
                         <br />
-                        <input type="submit" class="btn btn-primary" value 
-                        ="Send Message" />
+                        <input type="submit" class="btn btn-primary" value ="Send Message" />
                         </div>
                     </form>
                 </div>
@@ -54,10 +55,10 @@
         </div>
 
         <script>
-            $(function(){
+            $(function() {
                 var socket = io.connnect();
                 var $messageForm = $('#messageForm');
-                var $message = $('#messageForm');
+                var $message = $('#message');
                 var $chat = $('#chat');
 
                 $messageForm.submit(function(e){
